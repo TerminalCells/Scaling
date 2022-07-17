@@ -1,8 +1,8 @@
 # ExtractingGraph.py
 
 # By Lena Barrett
-# lbarrett@princeton.edu
-# March 2022
+# lbarrett@princeton.edu (Will be decommissioned in May 2024)
+# July 2022
 # Shvartsman Laboratory
 # Princeton University
 
@@ -23,7 +23,7 @@ import os # For querying directories on your machine
 from ij import IJ, ImagePlus # For dealing with GFP micrographs
 from sc.fiji.snt import Path, Tree, SNTService, PathFitter, SNT # SNT-specific packages
 
-DIR = ‘PATH FOR .TRACES FILES’
+DIR = 'PATH FOR .TRACES FILES'
 
 traces = os.listdir(DIR) # Store file names
 	
@@ -32,7 +32,7 @@ for i in traces: # For each .traces file; Be sure to account for any hidden file
 	tree = Tree(tracesFile) # Loading .traces file
 
 	GFP = i.replace('traces','tif') # Save GFP file name
-	img_path = ‘PATH FOR GFP MICROGRAPHS’ + GFP # Image path
+	img_path = 'PATH FOR GFP MICROGRAPHS' + GFP # Image path
 	IJ.open(img_path) # Open image in Fiji
 	img = IJ.getImage() # Shouldn't be necessary in theory but I needed it to get img object defined
 
@@ -47,7 +47,7 @@ for i in traces: # For each .traces file; Be sure to account for any hidden file
 
 	img.close() # Close open image
 	
-	os.chdir('PATH FOR EDGE LISTS’) # Directory for saving edge
+	os.chdir('PATH FOR EDGE LISTS') # Directory for saving edge
 	
 	txt = i.replace('traces','txt') # Setup .txt file to store edge lists
 
