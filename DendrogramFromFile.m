@@ -1,8 +1,8 @@
 % DendrogramFromFile.m
 
 % By Lena Barrett
-% lbarrett@princeton.edu
-% March 2022
+% lbarrett@princeton.edu (Will be decommissioned in May 2024)
+% July 2022
 % Shvartsman Lab
 % Princeton University
 
@@ -122,7 +122,7 @@ for j = 1:numFile % Change to process correct files; be sure to exclude hidden f
             for k = 1:forksLength % For every...fork? Try to find same node
                 compare(k) = Go.Nodes.x(forks(k)) == x1; % Find same node?
             end % End of for loop
-            fork = forks(compare==1); % Did we find same node  complicated?
+            fork = forks(compare==1); % Did we find same node complicated?
             forkLength = length(fork); % # of identical nodes by x-coord
             compare = zeros(1,forkLength); % Reinitialize y/n compare vari
             for k = 1:forkLength % For every potential same node
