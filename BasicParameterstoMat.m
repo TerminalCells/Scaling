@@ -28,9 +28,11 @@ clear all % Erase workspace
 close all % Close any open figure windows
 
 middleString = 'INSERT NICKNAME FOR GROUP OF TERMINAL CELLS'; % For naming .mat files
+string = 'INSERT PATH TO SAVE .MAT SUMMARY VARIABLES'; % Base path
+
 graphFileFolder = 'INSERT PATH TO RETRIEVE .TXT EDGE LISTS'; % Path for edge lists
 matFileFolder = 'INSERT PATH TO RETRIEVE .MAT FILES CONTAINING INFORMATION ABOUT TERMINAL CELLS'; % Path for .mat
-string = 'INSERT PATH TO SAVE .MAT SUMMARY VARIABLES'; % Base path
+
 FIRSTFIELD = 3;
 
 addpath(graphFileFolder); % Add graphFileFolder path for MATLAB to search
