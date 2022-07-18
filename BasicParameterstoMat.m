@@ -33,7 +33,7 @@ string = 'INSERT PATH TO SAVE .MAT SUMMARY VARIABLES'; % Base path
 graphFileFolder = 'INSERT PATH TO RETRIEVE .TXT EDGE LISTS'; % Path for edge lists
 matFileFolder = 'INSERT PATH TO RETRIEVE .MAT FILES CONTAINING INFORMATION ABOUT TERMINAL CELLS'; % Path for .mat
 
-FIRSTFIELD = 3;
+FIRSTFIELD = 3; % See prior tutorials' definition of this; # hidden fields
 
 addpath(graphFileFolder); % Add graphFileFolder path for MATLAB to search
 addpath(matFileFolder);
