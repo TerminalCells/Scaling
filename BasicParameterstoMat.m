@@ -10,7 +10,7 @@
 
 % This script performs simple calculations using terminal cells traced in
 % SNT, processed using the ExtractingGraph.py script, then processed using
-% the DendrogramFromFile.m script. Outputs are .mat variables containing
+% the DendrogramFromFile.m script. Outputs include .mat variables containing
 % ordered (by left/right cell (cell column), by tracheal metamere
 % (matrix rows), and by replicate ID (matrix columns)) values for the
 % number of endpoints, nodes, and edges AND for the sum of edge lengths
