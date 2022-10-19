@@ -160,25 +160,6 @@ for j = 1:numFile % Change to process correct files; be sure to exclude hidden f
         end % End of if statement
     end % End of for loop
                 
-    for i = 2:Pmax % For every node in the longest shortest unwt path
-        dif = PStore(i)-PStore(i-1); % What's the difference in node IDs?
-        if dif == 0 % If difference, do nothing
-        else % If there is no difference
-           for k = 1:dif-1 % For sorting nodes such that longest is on left
-              count = count+1; % For correctly assigning indices
-              lastNum(count) = PStore(i)-k; % For nodes outside of long SP
-           end % End of for loop
-        end % End of if statement
-    end % End of for loop
-        
-    countw = 0; % Initializing another count variable
-    while isempty(find(lastNum==0,1)) == 0 % Continuing to gather all nodes
-        count = count+1; % Update count variable
-        countw = countw+1; % Update other count variable
-        lastNum(count) = PStore(end) + countw; % Gathering nodes not in SP
-    end % End of while loop
-
-    order = [1 PStore lastNum]; % New order of nodes by node ID
 
     G = reordernodes(G,order); % Reorder nodes in graph
 
